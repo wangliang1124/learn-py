@@ -23,7 +23,7 @@ class downloader(object):
         div = div_bf.find_all('div', class_='listmain')
         a_bf = BeautifulSoup(str(div[0]))
         a = a_bf.find_all('a')
-        self.nums = len(a[16:])  #剔除不必要的章节，并统计章节数
+        self.nums = len(a[16:])  # 剔除不必要的章节，并统计章节数
         for each in a[16:]:
             self.names.append(each.string)
             self.urls.append(self.host + each.get('href'))
