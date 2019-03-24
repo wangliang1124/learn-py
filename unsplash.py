@@ -15,9 +15,9 @@ dir_path = save_path + '/' + 'unsplash-image'
 if not os.path.exists(dir_path):
     os.path.join(save_path, 'unsplash-image')
     os.mkdir(dir_path)
-n = 10
+n = 1
 #n建议从第2页开始，因为第一页的per_page可能是1，不是12
-while n > 1:
+while n > 0:
     print('当前爬取第' + str(n) + '次加载图片（本次共12张）')
     url = 'https://unsplash.com/napi/photos?page=' + str(
         n) + '&per_page=12'
