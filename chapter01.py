@@ -17,7 +17,6 @@ import seaborn as sns
 
 # plt.draw()
 
-
 fig = plt.figure()
 plt.axhline(y=0, c='black')
 plt.axvline(x=0, c='black')
@@ -25,8 +24,12 @@ ax = plt.gca()
 ax.set_xlim(-2.5, 2.5)
 ax.set_ylim(-3, 4)
 
-arrow_vector = partial(plt.arrow, width=0.01, head_width=0.1,
-                       head_length=0.2, length_includes_head=True)
+arrow_vector = partial(
+    plt.arrow,
+    width=0.01,
+    head_width=0.1,
+    head_length=0.2,
+    length_includes_head=True)
 
 arrow_vector(0, 0, 2, -1, color='g')
 arrow_vector(0, 0, -1, 2, color='c')
